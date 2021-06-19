@@ -15,3 +15,12 @@ Un __módulo__ es una unidad de implementación: base de datos, interfaz de usua
 Única responsabilidad no quiere decir que haga una sola cosa o tarea, 
 sino que el módulo se dedica a una responsabilidad y solo tiene una razón para cambiar.
 
+En el ejemplo de código del curso, tenemos una clase Service que tiene
+lógica de cálculo de impuestos, y además tiene lógica de conexión,
+inserción y consulta en base de datos. 
+Se rompe el principio porque es posible que tengamos dos o más 
+posibilidades de cambio:
+- que pasa si el impuesto cambia? o si el cálculo del impuesto cambia?
+- que pasa si debo cambiar de sqlite a postgres? o si debe cambiar de conexión directa a usar un ORM?
+
+
