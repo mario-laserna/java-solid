@@ -23,6 +23,7 @@ posibilidades de cambio:
 - que pasa si el impuesto cambia? o si el cálculo del impuesto cambia?
 - que pasa si debo cambiar de sqlite a postgres? o si debe cambiar de conexión directa a usar un ORM?
 
-### O - 
+### O – Open/Closed Principle (OCP)
+
 
 
