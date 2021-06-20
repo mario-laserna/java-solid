@@ -24,6 +24,30 @@ posibilidades de cambio:
 - que pasa si debo cambiar de sqlite a postgres? o si debe cambiar de conexión directa a usar un ORM?
 
 ### O – Open/Closed Principle (OCP)
+El principio busca que un módulo sea:
+- abierto para ser extendido
+- cerrado para ser modificado
+
+Los cambios en los módulos deberían tener bajo impacto, pero
+abiertos para ser extendido sin grandes cambios.
+
+Este principio se aplica o debe aplicar fuerte a aquellas 
+clases estables, que deben tener pocos cambios. 
+Hay otras clases que son inestables por naturaleza porque cambian 
+constantemente y en estas no aplica tanto este principio.
+
+En casos donde por ejemplo hay lógica asociada a un cliente específico 
+y tenemos un *(id == clientId)*, puede usarse este principio para 
+extraer esa lógica que cambia en clases aparte y no modificar el core.
+
+Consideraciones:
+- todos los atributos de una clase deberían ser privados, 
+  estar cerrados a modificación, y acceder a través de métodos
+- patrones que pueden ayudar:
+    - decorador
+    - estrategia
+    - fábrica
+
 
 
 
